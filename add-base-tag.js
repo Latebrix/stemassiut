@@ -1,9 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-// The directory containing your HTML files
-const htmlDir = './'; // Adjust this to your HTML files' directory
-const baseHref = '/stemassiut/'; // Base path for GitHub Pages
+// The base path for GitHub Pages
+const baseHref = '/stemassiut/';
 
 // Function to add <base> tag to an HTML file
 function addBaseTag(filePath) {
@@ -13,7 +12,7 @@ function addBaseTag(filePath) {
         return;
     }
 
-    // Regex to find the <head> tag
+    // Insert <base> tag after the <head> tag
     const updatedContent = content.replace(
         /<head>/i,
         `<head>\n    <base href="${baseHref}">`
@@ -36,4 +35,5 @@ function processDirectory(dir) {
 }
 
 // Start processing the directory
-processDirectory(htmlDir);
+const rootDir = './'; // Adjust this to your project root directory
+processDirectory(rootDir);
