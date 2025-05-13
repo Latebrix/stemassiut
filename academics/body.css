@@ -1,0 +1,235 @@
+body{
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    background: url(/academics/images/header.jpg);
+    background-size: cover;
+    padding: 10vh 5vw;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: center;
+    justify-content: flex-end;
+}
+header h1{
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 3px #000;
+    font-weight: 500;
+    text-align: left;
+}
+header p{
+    font-size: 2em;
+    color: rgb(199, 199, 199);
+    text-shadow: 1px 1px 1px #000;
+    font-weight: 400;
+    font-style: italic;
+    text-align: left;
+}
+.hr{
+    display: flex;
+    justify-content: center;
+}
+hr{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 3px;
+    border: none;
+    border-radius: 50%;
+    width:70vw;
+}
+
+section{
+    height: fit-content;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 5vw;
+    align-items: center;
+    height: fit-content;
+}
+section .section-head h1{
+    font-size: 3em;
+    text-align: center;
+}
+section .section-content{
+    display: flex;
+    font-size: 16pt;
+    flex-direction: row;
+    height: fit-content;
+    padding: 5vh 5vw;
+    justify-content: center;
+    align-items: center;
+}
+section .section-content img{
+    width: 40vw;
+    border-radius: 12px;
+}
+section p{
+    padding: 0vh 2vw;
+    font-size: 16pt;
+}
+.tables table{
+    width: 80vw;
+    height: 80vh;
+    justify-content: space-around;
+}
+.tables table:nth-child(2){
+    display: none;
+}
+.tables table tr:nth-child(1){
+    background-color: rgb(195, 187, 247);
+}
+.tables table tr:nth-child(3),
+.tables table tr:nth-child(5),
+.tables table tr:nth-child(7),
+.tables table tr:nth-child(9),
+.tables table tr:nth-child(11),
+.tables table tr:nth-child(13),
+.tables table tr:nth-child(15){
+    background-color: #aaa;
+}
+.tables table tr th:nth-child(1){
+    border-radius: 15px 0px 0px 15px;
+}
+.tables table tr th:nth-child(6){
+    border-radius: 0px 15px 15px 0px;
+}
+.tables#grading table tr th:nth-child(2){
+    border-radius: 0px 15px 15px 0px;
+}
+.figure{
+    height: 60vh; 
+    width: 60vw; 
+    background-repeat: no-repeat;
+    background-image: url(/academics/images/grad.svg); 
+    background-position: center center; 
+    background-size: fill;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.7s ease;
+    background-color: rgba(255, 255, 255, 0.0);
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+@media screen and (max-width: 1170px){
+    .tables table{
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 790px){
+    section .sectionbody{
+        flex-direction: column;
+    }
+    section .sectionbody.right{
+        flex-direction: column-reverse;
+    }
+    section .sectionbody p, section .section-content p{
+        width: 90vw;
+    }
+    section .right img{
+        transform: translateX(0px);
+    }
+    section .right p{
+        transform: translateX(0px) translateY(-100px);
+    }
+    section .left img{
+        transform: translateX(0px);
+    }
+    section .left p{
+        transform: translateX(0px) translateY(-100px);
+    }
+    
+    section .section-content ul img{
+        height: 16vw;
+    }
+    
+    #vision {
+        width: 100%;
+    }
+    #vision img {
+        width: 70vw;
+        height: auto;
+    }
+    #labs img{
+        -webkit-transform: none;
+        transform: none;
+        width: 50vw;
+        height: auto;
+    }
+    .tables table{
+        font-size: 0.7em;
+    }
+    .figure{
+        width: 90vw;
+        height: 70vh;
+    }
+}
+@media screen and (max-width: 615px){
+    .tables table{
+        font-size: 0.6em;
+    }
+}
+@media screen and (max-width: 500px){
+    header{
+        padding-bottom: 6vh;
+    }
+    header h1{
+        font-size: 26pt;
+    }
+    header p{
+        font-size: 20pt;
+    }
+    .tables table:nth-child(1){
+        display: none;
+    }
+    .tables table:nth-child(2){
+        display: table;
+    }
+    .tables table{
+        font-size: 0.75em;
+    }
+    .tables table tr:nth-child(3),
+    .tables table tr:nth-child(5),
+    .tables table tr:nth-child(7),
+    .tables table tr:nth-child(9),
+    .tables table tr:nth-child(11),
+    .tables table tr:nth-child(13),
+    .tables table tr:nth-child(15),
+    .tables table tr:nth-child(17){
+        background-color: #aaa;
+    }
+    .tables table tr th:nth-child(1){
+        border-radius: 10px 0px 0px 10px;
+    }
+    .tables table tr th:nth-child(3){
+        border-radius: 0px 10px 10px 0px;
+    }
+    .tables#grading table tr th:nth-child(3){
+        border-radius: 0px 10px 10px 0px;
+    }
+}
+@media screen and (max-width: 400px){
+    section p{
+        font-size: 12pt;
+        padding-top: 2vh;
+    }
+    section .section-head h1{
+        font-size: 1.4em;
+    }
+    .figure{
+        width: 90vw;
+        height: 50vh;
+    }
+}

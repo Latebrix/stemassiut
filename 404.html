@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='main.css' rel='stylesheet'>
+        <style>
+            header {
+                height: fit-content;
+                padding-top: 30vh;
+                padding-bottom: 15vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            header b {
+                font-family: 'Canela Deck', Georgia, Times, 'Times New Roman', serif;
+            }
+            header h2 {
+                font-weight: lighter;
+            }
+            header h3 {
+                letter-spacing: 5pt;
+            }
+            header a {
+                color: #000;
+                opacity: 0.7;
+                text-decoration: underline;
+                transition: all ease 0.2s;
+            }
+            header a:hover {
+                opacity: 1;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCT6DQK6JB"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-PCT6DQK6JB');
+        </script>        
+        <link href="images/icon.svg" rel="icon">
+        <link href='/css/all.min.css' rel='stylesheet'>
+        <title>404 page not found | Assiut STEM School</title>
+        <meta name="description" content="Assiut STEM School is a school that ranked as the best high in Upper Egypt">
+    </head>
+    <body>
+        <nav id="nav-placeholder">
+        </nav>
+        <header>
+            <h2>The page you requested were <b>not found</b></h2>
+            <h3>-erorr 404-</h3>
+            <hr>
+            <p>back to <a href="/"><span>HOME</span></a>?</p>
+        </header>
+        <footer id="footer-placeholder">
+        </footer>
+        <script type="text/javascript" class="global-nav-footer">
+            $(function(){
+                $("#nav-placeholder").load("/nav.html");
+            });
+            $(function(){
+                $("#footer-placeholder").load("/footer.html");
+            });
+        </script>
+        </body>
+</html>

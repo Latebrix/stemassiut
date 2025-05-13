@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='main.css' rel='stylesheet'>
+        <link href='body.css' rel='stylesheet'>
+        <link href="images/icon.svg" rel="icon">
+        <link href='/css/all.min.css' rel='stylesheet'>
+        <title>Assiut STEM School</title>
+        <meta name="description" content="Assiut STEM School is a school that ranked as the best high in Upper Egypt">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCT6DQK6JB"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-PCT6DQK6JB');
+        </script>
+    </head>
+    <body>
+        <nav id="nav-placeholder">
+        </nav>
+        <header>
+            <h1>Welcome to STEM Assiut</h1><br>
+            <p>A place for 
+                <span
+                class="txt-rotate"
+                data-period="6000"
+                data-rotate='[ "innovation.", "excellence.", "uniqueness!"]'> 
+                </span>
+            </p>
+        </header>
+        <section>
+
+        </section>
+        <footer id="footer-placeholder">
+        </footer>
+        <script type="text/javascript" class="global-nav-footer">
+            $(function(){
+                $("#nav-placeholder").load("/nav.html");
+            });
+            $(function(){
+                $("#footer-placeholder").load("/footer.html");
+            });
+        </script>
+        <script src="txt-rotate.js"></script>
+        <script type="text/javascript" class="scroll-sticky">
+            window.addEventListener("scroll", function(){
+                var nav = document.querySelector("nav");
+
+                nav.classList.toggle("sticky", window.scrollY > 0);
+                // nav.classList.toggle("unsticky", window.scrollY > 222);
+            });
+        </script>
+    </body>
+</html>

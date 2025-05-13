@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='/main.css' rel='stylesheet'>
+        <link href='body.css' rel='stylesheet'>
+        <link href="/images/icon.svg" rel="icon">
+        <link href='/css/all.min.css' rel='stylesheet'>
+        <title>Webmasters | Assiut STEM School</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCT6DQK6JB"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-PCT6DQK6JB');
+        </script>
+        <meta name="description" content="Assiut STEM School is a school that ranked as the best high in Upper Egypt">
+    </head>
+    <body>
+        <nav id="nav-placeholder">
+        </nav>
+        <header>
+            <h1>Webmasters</h1>
+            <p>students behind this website.</p>
+        </header>
+        <section class="people reveal">
+            <div class="administration">
+                <div class="person">
+                    <img src="images/mosaab.webp" alt="Mosaab Abdelaleem '23 - Founder, 2022 Webmaster & Supervisor">
+                    <div class="person-info">
+                        <h3 class="name">Mosaab G.K. Abdelaleem '23</h3>
+                        <p class="position">Founder, 2022 Webmaster & Supervisor</p>
+                        <p class="email"><i class="fa-solid fa-envelope"></i> <a href="mailto:mossab.1420056@stemassiut.moe.edu.eg">Email</a></p>
+                    </div>
+                </div>
+                <div class="person">
+                    <img src="images/blank-f.jpg" alt="Aya Mohamed '25 - 2023 Webmaster">
+                    <div class="person-info">
+                        <h3 class="name">Aya Mohamed '25</h3>
+                        <p class="position">2023 Webmaster</p>
+                        <p class="email"><i class="fa-solid fa-envelope"></i> <a href="mailto:aya-allah.1422508@stemassiut.moe.edu.eg">Email</a></p>
+                    </div>
+                </div>
+                <div class="person">
+                    <img src="images/blank-m.jpg" alt="Mostafa Mahmoud '25 - 2023 Webmaster">
+                    <div class="person-info">
+                        <h3 class="name">Mostafa Mahmoud '25</h3>
+                        <p class="position">2023 Webmaster</p>
+                        <p class="email"><i class="fa-solid fa-envelope"></i> <a href="mailto:mustafa.1422062@stemassiut.moe.edu.eg">Email</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer-placeholder">
+        </footer>
+        <script type="text/javascript" class="global-nav-footer">
+            $(function(){
+                $("#nav-placeholder").load("/nav.html");
+            });
+            $(function(){
+                $("#footer-placeholder").load("/footer.html");
+            });
+        </script>
+        <script type="text/javascript" class="scroll-sticky">
+            window.addEventListener("scroll", function(){
+                var nav = document.querySelector("nav");
+
+                nav.classList.toggle("sticky", window.scrollY > 0);
+                // nav.classList.toggle("unsticky", window.scrollY > 6900);
+            });
+        </script>
+        <script type="text/javascript" class="items-reveal">
+            window.addEventListener('scroll', reveal);
+
+            function reveal(){
+                var reveals = document.querySelectorAll('.reveal');
+
+                for(var i = 0; i < reveals.length; i++){
+                    
+                    var windowHeight = window.innerHeight;
+                    var revealTop = reveals[i].getBoundingClientRect().top;
+                    var revealPoint = 150;
+
+                    if(revealTop < windowHeight - revealPoint){
+                        reveals[i].classList.add('active');
+                    }
+                    else{
+                        // reveals[i].classList.remove('active');
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

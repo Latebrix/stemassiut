@@ -1,0 +1,281 @@
+body{
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    background-image: url(/contact/images/header.jpg), linear-gradient(rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33));
+    background-blend-mode: darken;    
+    background-size: cover;
+    padding: 10vh 5vw;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: center;
+    justify-content: flex-end;
+}
+header h1{
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 3px #000;
+    font-weight: 500;
+    text-align: left;
+}
+header p{
+    font-size: 2em;
+    color: rgb(199, 199, 199);
+    text-shadow: 1px 1px 1px #000;
+    font-weight: 400;
+    font-style: italic;
+    text-align: left;
+}
+hr{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 3px;
+    border: none;
+    border-radius: 50%;
+    width:70vw;
+}
+.hr{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+section a{
+    text-decoration: underline;
+    color: black;
+    transition: all ease 0.2s;
+    opacity: .7;
+}
+section a:hover{
+    opacity: 1;
+}
+section{
+    height: fit-content;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    align-items: center;
+    height: fit-content;
+}
+section .section-head{
+    height: 18vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+section .section-head h1{
+    font-size: 3em;
+}
+section .section-content{
+    display: flex;
+    font-size: 16pt;
+    flex-direction: column;
+    height: fit-content;
+    padding: 5vh 0vw;
+    justify-content: center;
+    align-items: center;
+}
+section .section-content p{
+    background-color: rgba(124, 130, 163, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    width: 50vw;
+    height: fit-content;
+    z-index: 1;
+}
+section .section-content img{
+    height: 70vh;
+    border-radius: 12px;
+}
+.form form{
+    color: #01032C;
+    width: 30vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(124, 130, 163, 0.2);
+    padding: 1.5em;
+    border-radius: 12px;
+    margin-bottom: 50px;
+}
+.form form input, .form form textarea, .form form button{
+    border: 0;
+    font-size: 1.2em;
+    padding: 2vh 1vw;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    resize: vertical;
+}
+.form form button{
+    background-color: #01032C;
+    color: #ffffff;
+    cursor: pointer;
+    transition: ease all 0.2s;
+}
+.form form button:hover{
+    opacity: 0.9;
+}
+.people{
+    height: fit-content;
+    padding-top: 50px;
+}
+.people .administration{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70vw;
+    width: 50vw;
+    margin-bottom: 50px;
+}
+.people .administration .person{
+    background-color: rgb(124, 130, 163);
+    border-radius: 12px;
+    width: 21vw;
+    height: fit-content;
+    padding: 0;
+    margin: 0;
+    transition: all ease 0.2s; 
+}
+.people .administration .person:hover{
+    transform: scale(102%);
+    box-shadow: 0px 0px 5px 3px #0004;
+}
+.people .administration .person img{
+    width: 21vw;
+    height: 20vw;
+    border-radius: 12px 12px 0px 0px;
+}
+.people .administration .person .person-info{
+    margin: 10px;
+}
+.people .administration.counselling{
+    flex-direction: column;
+    height: 70vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.people .administration.counselling .person{
+    width: 50vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 12px;
+}
+/* .people .administration.counselling .person hr{
+    width: 1px;
+    height: 100%;
+    margin-left: 1vw;
+    border-radius: 0;
+} */
+.people .administration.counselling .person img{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 12px 0 0 12px;
+}
+.people .administration.counselling.competitions{
+    flex-direction: column;
+    height: 30vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.map{
+    border: 0;
+    height: 50vh;
+    width: 50vw;
+    margin: 3vh;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.7s ease;
+    background-color: rgba(255, 255, 255, 0.0);
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 805px){
+    .form form{
+        width: 70vw;
+    }
+    .map{
+        height: 70vh;
+        width: 70vw;
+    }    
+}
+@media screen and (max-width: 768px){
+    .people .administration{
+        flex-direction: column;
+        align-items: center;
+    }
+    .people .administration .person{
+        width: 50vw;
+        margin-bottom: 5vh;
+    }
+    .people .administration .person img{
+        width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 500px){
+    header{
+        padding-bottom: 6vh;
+    }
+    header h1{
+        font-size: 26pt;
+    }
+    header p{
+        font-size: 20pt;
+    }
+    .form form{
+        width: 80vw;
+    }
+    .people .administration{
+        margin: 0;
+    }
+    .people .administration .person{
+        width: 80vw;
+    }
+    .people .administration.counselling .person{
+        width: 80vw;
+    }
+    .people .administration.counselling{
+        margin-bottom: 50px;
+    }
+    .map{
+        height: 40vh;
+    }    
+}
+@media screen and (max-width: 450px){
+    .form form p a{
+        font-size: 3vw;
+    }
+}
+@media screen and (max-width: 400px){
+    .form form{
+        width: 90vw;
+    }
+    .people .administration .person{
+        width: 90vw;
+    }
+    .people .administration.counselling .person{
+        width: 90vw;
+    }
+    .map{
+        width: 90vw;
+    }    
+    .form form p a{
+        font-size: 4vw;
+    }
+}

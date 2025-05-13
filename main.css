@@ -1,0 +1,403 @@
+@font-face {
+    font-family: 'Canela Deck';
+    src: url(/webfonts/CanelaDeck-Regular-Web.woff2) format('woff2');
+    font-weight:  400;
+    font-style:   normal;
+    font-stretch: normal;
+}
+@font-face {
+    font-family: 'Canela Deck';
+    src: url(/webfonts/CanelaDeck-RegularItalic-Cy-Gr-Web.woff2) format('woff2');
+    font-weight:  400;
+    font-style:   italic;
+    font-stretch: normal;
+}
+@font-face {
+    font-family: 'GT America';
+    src: url(/webfonts/GT-America-Standard-Regular.woff2) format('woff2');
+    font-weight:  400;
+    font-style:   normal;
+    font-stretch: normal;
+}
+@font-face {
+    font-family: 'GT America';
+    src: url(/webfonts/GT-America-Standard-Medium.woff2) format('woff2');
+    font-weight: medium;
+    font-style: normal;
+    font-stretch: normal;
+}
+@font-face {
+    font-family: 'GT America';
+    src: url(/webfonts/GT-America-Standard-Bold.woff2) format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scrollbar-color: rgb(195, 187, 247) rgb(29, 29, 29);
+    scrollbar-width: thin; 
+    font-family:'GT America','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Canela Deck', Georgia, Times, 'Times New Roman', serif;
+}
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #01032c11;
+  width: 15px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #01032c;
+  border-radius: 25px;
+  border: 4px solid #eeeef1;
+}
+a, ul, li{
+    text-decoration:none;
+    list-style: none;
+}
+nav{
+    position: fixed;
+    padding: 2.5vh 5vw;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    background-color: #01032c00;
+    z-index: 99;
+}
+nav.sticky{
+    padding: 0vh 5vw;
+    background-color: #01032c;
+    box-shadow: 0px 0px 5px 3px #6666;
+}
+nav.sticky .logo{
+    width: 12vh;
+    margin: 3vh 0.5vw 3vh 3vh;
+}
+nav.unsticky{
+    transform: translateX(100vw);
+    opacity: 0;
+}
+nav .logo-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+nav .logo{
+    position: relative;
+    width: 15vh;
+    margin-right: 0.5vw;
+    transition: all ease 0.2s;
+}
+nav .logo-text{
+    font-family: 'Canela Deck', Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    position: relative;
+    margin: 15px 7px;
+    font-weight: 600;
+    font-size: 1.35em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    text-shadow: 1px 1px 1px #000;
+}
+nav ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+nav ul li{
+    position: relative;
+}
+nav ul li a{
+    position: relative;
+    display: block;
+    margin: 2vh 2vw;
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+nav ul li a:hover{
+    opacity: 1;
+}
+nav ul li a span{
+    position: relative;
+    transition: ease all 0.35s;
+}
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    border-radius: 2px;
+    background-color: white;
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+}
+nav ul li a:hover::after,
+nav ul li a:focus::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+.burger{
+    display: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    transition: all ease 0.5s;
+}
+.burger div{
+    background-color: #fff;
+    height: 2.5px;
+    width: 25px;
+    margin: 2.2px;
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out;   
+}
+.burger.open .line2{
+    opacity: 0;
+    transform: translateX(-5px);
+}
+.burger.open .line1{
+    transform: rotate(45deg) translateY(10px);
+    -ms-transform: rotate(45deg) translateY(10px);
+    -webkit-transform: rotate(45deg) translateY(10px);
+}
+.burger.open .line3{
+    transform: rotate(-45deg) translateY(-10px);
+    -ms-transform: rotate(-45deg) translateY(-10px);
+    -webkit-transform: rotate(-45deg) translateY(-10px);
+}
+hr{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 3px;
+    border: none;
+    border-radius: 50%;
+    width:70vw;
+}
+footer{
+    color: #000;
+    background-color: #01032c11;
+    padding: 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer .container{
+    display: flex;
+    flex-direction: row;
+}
+footer .copyright{
+    /* display: flex; */
+    display: inline;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer .copyright hr{
+    display: inline-flex;
+}
+footer .copyright p{
+    display: inline;
+}
+footer .copyright a{
+    color: #000;
+    opacity: 1;
+}
+footer .right{
+    width: 30vw;
+}
+footer .right-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+footer .left{
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+footer .center{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    width: 30vw;
+}
+footer img{
+    width: 15vw;
+}
+footer li{
+    color: #000;
+    opacity: 0.6;
+    margin-bottom: 2vh;
+    transition: 0.3s;
+}
+footer li:hover, .copyright-left a:hover, .copyright a:hover{
+    text-decoration: underline;
+    opacity: 0.9;
+}
+footer h2{
+    font-family: 'Canela Deck', Georgia, Times, 'Times New Roman', serif;
+}
+footer .list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4vh;
+    width: 20vw;
+}
+footer h2{
+    margin-bottom: 3vh;
+}
+footer .left .social{
+    margin-top: 3vh;
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+    width: 15vw;
+    justify-content: space-between;
+}
+footer p{
+    opacity: 0.7;
+}
+header{
+    transition: all ease 0.25s;
+}
+.inline-text{
+    display: inline !important;
+}
+.current-page{
+    opacity: 1 !important; 
+}
+
+@media screen and (max-width: 1380px){
+    nav ul{
+        display: none;
+        position: absolute;
+        padding: 20vh 0vh 5vh 0vh;
+        right: 0px;
+        height: 100vh;
+        top: 0vh;
+        background-color:#01032c;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }   
+    .burger{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-active{
+        transform: translateX(0%);
+    }
+}
+@media screen and (max-width: 768px){
+    footer .container{
+        flex-direction: column;
+    }
+    footer .left{
+        justify-content: space-around;
+        width: 90vw;
+    }
+    footer .center{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    footer img{
+        width: 30vw;
+    }
+    footer .right-box{
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        justify-content: space-around;
+    }
+    footer .right{
+        width: 40vw;
+    }
+    footer .left .social{
+        width: 30vw;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width: 600px){
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer .left .social{
+        width: 90vw;
+        align-items: center;
+        justify-content: space-around;
+    }
+    footer .left{
+        flex-direction: column;
+    }
+    footer .center{
+        flex-direction: row;
+        justify-content: center;
+        width: 90vw;
+    }
+    footer img{
+        width: 40vw;
+    }
+    footer .right-box{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 90vw;
+        justify-content: space-around;
+    }
+    footer .right{
+        width: 90vw;
+    }
+    *::-webkit-scrollbar {
+        width: 0px;
+    }
+}
+@media screen and (max-width: 330px){
+    nav .logo-text{
+        font-size: 1.2em;
+    }   
+    nav.sticky .logo{
+        width: 25vw;
+    }
+}
+@media screen and (max-width: 300px){
+    nav .logo-text{
+        font-size: .8em;
+    }   
+    nav.sticky .logo{
+        width: 20vw;
+    }
+}
